@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/minwoo/Documents/GitHub/100JoonMyCode",
-      "program": "/Users/minwoo/Documents/GitHub/100JoonMyCode/build/Debug/outDebug"
+      "cwd": "/Users/minwoo/Documents/GitHub/100JoonMyCode/n4153",
+      "program": "/Users/minwoo/Documents/GitHub/100JoonMyCode/n4153/build/Debug/outDebug"
     }
   ]
 }
