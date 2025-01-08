@@ -1,26 +1,18 @@
 const input = require('fs').readFileSync('./input.txt').toString().split('\n');
 
-const num = input[0];
-const values = input.splice(1);
-const data = values.map((ele) => {
-	return ele.split(' ');
-});
+const num = Number(input[0]);
+const values = input.slice(1);
+const data = values.map((ele) => ele.split(' ').map(Number));
 
 class Person {
-	height;
-	weight;
-	rank;
-	constructor(h, w) {
-		this.height = h;
-		this.weight = w;
+	constructor(weight, height) {
+		this.weight = weight;
+		this.height = height;
 		this.rank = 1;
 	}
 }
 
-const personInfo = [];
-for (let i = 0; i < num; i++) {
-	personInfo[i] = new Person(data[i][0], data[i][1]);
-}
+const personInfo = data.map(([weight, height]) => new Person(weight, height));
 
 for (let i = 0; i < num; i++) {
 	for (let j = 0; j < num; j++) {
